@@ -1,0 +1,13 @@
+# Normalizează terminatorii de linie
+* text=auto
+
+# Forțează LF (Unix) pentru fișiere de cod
+*.js text eol=lf
+*.ts text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+
+# CRLF pentru fișiere Windows (ex: batch)
+*.bat text eol=crlf

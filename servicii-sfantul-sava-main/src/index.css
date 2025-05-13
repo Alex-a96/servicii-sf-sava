@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 60% 98%;
+    --foreground: 36 10% 15%;
+
+    --card: 36 60% 99%;
+    --card-foreground: 36 10% 15%;
+
+    --popover: 36 60% 98%;
+    --popover-foreground: 36 10% 15%;
+
+    --primary: 30 43% 27%;
+    --primary-foreground: 36 60% 97%;
+
+    --secondary: 42 100% 95%;
+    --secondary-foreground: 30 43% 25%;
+
+    --muted: 36 30% 94%;
+    --muted-foreground: 36 10% 40%;
+
+    --accent: 36 60% 94%;
+    --accent-foreground: 30 43% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 60% 97%;
+
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 30 43% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply relative min-h-[80vh] flex flex-col justify-center items-center bg-cream text-center p-8 overflow-hidden;
+  }
+  
+  .hero-bg {
+    @apply absolute inset-0 w-full h-full object-cover blur-sm opacity-20 z-0;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-primary mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-serif text-primary/80 mb-6;
+  }
+  
+  .page-section {
+    @apply py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-gold hover:bg-gold-dark text-white font-medium rounded transition-all duration-300 inline-block;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border-2 border-gold text-gold hover:bg-gold/10 font-medium rounded transition-all duration-300 inline-block;
+  }
+  
+  .contact-input {
+    @apply w-full p-3 border border-border bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-gold/50;
+  }
+
+  .card {
+    @apply flex flex-col justify-between items-center p-5 h-full box-border;
+  }
+
+  .card-content {
+    @apply flex-1 flex flex-col justify-between;
+  }
+
+  .card-button {
+    @apply mt-auto text-center;
+  }
+
+  .stripe-row {
+    @apply flex justify-center gap-10 flex-wrap mt-8;
+  }
+
+  .stripe-column {
+    @apply flex-[1_1_250px] max-w-[300px] p-5 bg-white rounded-lg shadow-md flex justify-center;
+  }
+
+  .button-wrapper {
+    @apply w-full flex justify-center;
+  }
+
+  stripe-buy-button {
+    @apply block max-w-full;
+  }
+}
