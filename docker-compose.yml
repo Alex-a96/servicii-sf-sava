@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./servicii-sfantul-sava-main
+      dockerfile: Dockerfile
+    image: alexa96/servicii-sf-sava-frontend:latest
+    ports:
+      - "5173:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: alexa96/servicii-sf-sava-backend:latest
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production

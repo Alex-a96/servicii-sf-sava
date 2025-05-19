@@ -54,31 +54,31 @@
   .hero-section {
     @apply relative min-h-[80vh] flex flex-col justify-center items-center bg-cream text-center p-8 overflow-hidden;
   }
-  
+
   .hero-bg {
     @apply absolute inset-0 w-full h-full object-cover blur-sm opacity-20 z-0;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-primary mb-4;
   }
-  
+
   .section-subtitle {
     @apply text-xl md:text-2xl font-serif text-primary/80 mb-6;
   }
-  
+
   .page-section {
     @apply py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto;
   }
-  
+
   .btn-primary {
     @apply px-6 py-3 bg-gold hover:bg-gold-dark text-white font-medium rounded transition-all duration-300 inline-block;
   }
-  
+
   .btn-secondary {
     @apply px-6 py-3 bg-transparent border-2 border-gold text-gold hover:bg-gold/10 font-medium rounded transition-all duration-300 inline-block;
   }
-  
+
   .contact-input {
     @apply w-full p-3 border border-border bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-gold/50;
   }
@@ -107,7 +107,8 @@
     @apply w-full flex justify-center;
   }
 
-  stripe-buy-button {
+  /* ❗️ Corectare: adaugă clasă în loc de selector HTML invalid */
+  .stripe-buy-button {
     @apply block max-w-full;
   }
 }
